@@ -84,7 +84,7 @@
     {{-- FORM --}}
 
     {{-- Table History --}}
-    <div class="container">
+    {{-- <div class="container">
         <div class="row d-flex justify-content-center align-items-center" style="height: 100vh;">
             <div class="col-md-10 col-sm-12">
                 <h1 class="my-4" style="text-align: center;">Histori Aspirasi</h1>
@@ -137,7 +137,7 @@
                 
             </div>
         </div>
-    </div>
+    </div> --}}
     {{-- Table History --}}
 
 </body>

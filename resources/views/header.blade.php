@@ -12,6 +12,7 @@
             <div class="navbar-nav mx-auto">
                 <a class="nav-link active fs-5 text-black" aria-current="page" href="/">Home</a>
                 <a class="nav-link fs-5 text-black" href="/kegiatan-warga">Gallery</a>
+                <a class="nav-link fs-5 text-black" href="/history-aspirasi">History Aspirasi</a>
             </div>
             <div class="navbar-nav float-right">
                 <a href="{{ route('login') }}" target="_blank" class="d-flex align-items-center text-black"><i

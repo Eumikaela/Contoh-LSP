@@ -12,13 +12,14 @@ class HomeController extends Controller
  
 
     public function index(Request $request){
-        $laporan = laporan::all();
+        // $laporan = laporan::all();
         
-        if ($request->has('kegiatan')) {
-            $kegiatanFilter = $request->input('kegiatan');
-            $laporan_kegiatan = Laporan::whereIn('kegiatan', $kegiatanFilter)->get();
-        }
-        return view('welcome',compact('laporan'));
+        // if ($request->has('kegiatan')) {
+        //     $kegiatanFilter = $request->input('kegiatan');
+        //     $laporan_kegiatan = Laporan::whereIn('kegiatan', $kegiatanFilter)->get();
+        // }
+        // return view('welcome',compact('laporan'));
+        return view("welcome");
     }
 
     public function kegiatan(){
@@ -61,6 +62,17 @@ class HomeController extends Controller
         $laporan->delete();
 
         return Redirect('/dashboard')->with('success', 'Laporan deleted successfully');
+    }
+
+    public function history(Request $request)
+    {
+        $laporan = laporan::all();
+        
+        if ($request->has('kegiatan')) {
+            $kegiatanFilter = $request->input('kegiatan');
+            $laporan_kegiatan = Laporan::whereIn('kegiatan', $kegiatanFilter)->get();
+        }
+        return view('history-aspirasi',compact('laporan'));
     }
 
 }
